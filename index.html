@@ -16,11 +16,11 @@
   </head>
 
   <body>
-    <section>
+    <section id="section1">
       <div class="container">
         <div class="cart">
           <div class="col-md-12 col-lg-10 mx-auto">
-            <div class="cart-item">
+            <div class="cart-item" id="cart1">
               <div class="row">
                 <div class="col-md-7 center-item">
                   <img src="images/product-1.png" alt="" />
@@ -45,12 +45,12 @@
                     </button>
                   </div>
                   <h5>$ <span id="default-amount">1219</span></h5>
-                  <img src="images/remove.png" alt="" class="remove-item" />
+                  <img src="images/remove.png" alt="" class="remove-item" id="cross">
                 </div>
               </div>
             </div>
 
-            <div class="cart-item">
+            <div class="cart-item" id="cart2">
               <div class="row">
                 <div class="col-md-7 center-item mx-auto">
                   <img src="images/product-2.png" alt="" />
@@ -72,7 +72,7 @@
                     </button>
                   </div>
                   <h5>$<span id="default-amount2">59</span></h5>
-                  <img src="images/remove.png" alt="" class="remove-item" />
+                  <img src="images/remove.png" alt="" class="remove-item" id="cross2" />
                 </div>
               </div>
             </div>
@@ -93,12 +93,18 @@
               </div>
             </div>
             <div class="col-md-12 pt-4 pb-4">
-              <button type="button" class="btn btn-success check-out">
+              <button id="checkout-btn" type="button" class="btn btn-success check-out">
                 Check Out
               </button>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="order-placed">
+      <div class="container">
+        <h2 class="text-center">Thank You for your order. Your order has been placed.</h2>
       </div>
     </section>
 
