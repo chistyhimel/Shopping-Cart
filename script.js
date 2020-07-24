@@ -1,80 +1,48 @@
-// add item value
+// Adding function
+function addItems(id1,id2,id3){
+    const inputNumber = parseFloat(document.getElementById(id1).value)+1;
+    document.getElementById(id1).value = inputNumber;
+    const defautAmount = parseFloat(document.getElementById(id2).innerText);
+    const totalAmount = defautAmount+ id3;
+    document.getElementById(id2).innerText=totalAmount;
+    const subTotal=parseFloat(document.getElementById('sub-total').innerText);
+    const subTotalAmount = subTotal+id3;
+    document.getElementById('sub-total').innerText=subTotalAmount;
+    document.getElementById('total').innerText=subTotalAmount;
+}
+// Removing function
+function removeItems(id1,id2,id3){
+    const inputNumber = parseFloat(document.getElementById(id1).value)-1;
+    document.getElementById(id1).value = inputNumber;
+    const defautAmount = parseFloat(document.getElementById(id2).innerText);
+    const totalAmount = defautAmount-id3;
+    document.getElementById(id2).innerText=totalAmount;
+    const subTotal=parseFloat(document.getElementById('sub-total').innerText);
+    const subTotalAmount = subTotal-id3;
+    document.getElementById('sub-total').innerText=subTotalAmount;
+    document.getElementById('total').innerText=subTotalAmount;
+}
 
-const plusButton = document.getElementById("plusBtn");
+// Item 1
+// Add Items from Cart
+const plusButton = document.getElementById('plus');
 plusButton.addEventListener('click',function(){
-    const inputNumber = parseFloat(document.getElementById("input-number").value);
-    
-    const totalInput = inputNumber + 1;
-    document.getElementById("input-number").value = totalInput;
-
-    const defaultAmount =parseFloat(document.getElementById("default-amount").innerText);
-    const totalAmount = defaultAmount+ 1219;
-    document.getElementById("default-amount").innerText = totalAmount;
-
-        // subtotal section
-const subTotal = parseFloat(document.getElementById("sub-total").innerText);
-const subtotalamount = defaultAmount + subTotal;
-document.getElementById("sub-total").innerText=subtotalamount;
-
-document.getElementById("total").innerText=subtotalamount;
+    addItems('input-number','default-amount',1219)
 })
-
-// remove item value
-const minusButton = document.getElementById("minusBtn");
+// Removing items
+const minusButton = document.getElementById('minus');
 minusButton.addEventListener('click',function(){
-    const inputNumber = parseFloat(document.getElementById("input-number").value);
-    const totalInput = inputNumber - 1;
-    document.getElementById("input-number").value = totalInput;
-
-    const defaultAmount =parseFloat(document.getElementById("default-amount").innerText);
-    const totalAmount = defaultAmount- 1219;
-    document.getElementById("default-amount").innerText = totalAmount;
-
-    const subTotal = parseFloat(document.getElementById("sub-total").innerText);
-const subtotalamount =  subTotal-totalAmount ;
-document.getElementById("sub-total").innerText=subtotalamount;
-document.getElementById("total").innerText=subtotalamount;
-    
-
-
+removeItems('input-number','default-amount',1219);
 })
 
-// 2nd item case
-
-const plusButton2 = document.getElementById("plusBtn2");
-plusButton2.addEventListener('click',function(){
-    const inputNumber2 = parseFloat(document.getElementById("input-number2").value);
-    
-    const totalInput2 = inputNumber2 + 1;
-    document.getElementById("input-number2").value = totalInput2;
-
-    const defaultAmount2 =parseFloat(document.getElementById("default-amount2").innerText);
-    const totalAmount2 = defaultAmount2+ 59;
-    document.getElementById("default-amount2").innerText = totalAmount2;
-    
-
-    // subtotal section
-const subTotal = parseFloat(document.getElementById("sub-total").innerText);
-const subtotalamount2 = defaultAmount2 + subTotal;
-document.getElementById("sub-total").innerText=subtotalamount2;
-document.getElementById("total").innerText=subtotalamount2;
+// Item 2
+// Adding items
+const plusBtn2 = document.getElementById('plus2');
+plusBtn2.addEventListener("click",function(){
+    addItems('input-number2','default-amount2',59)
 })
-
-// remove item value
-const minusButton2 = document.getElementById("minusBtn2");
-minusButton2.addEventListener('click',function(){
-    const inputNumber2 = parseFloat(document.getElementById("input-number2").value);
-    const totalInput2 = inputNumber2 - 1;
-    document.getElementById("input-number2").value = totalInput2;
-
-    const defaultAmount2 =parseFloat(document.getElementById("default-amount2").innerText);
-    const totalAmount2 = defaultAmount2- 59;
-    document.getElementById("default-amount2").innerText = totalAmount2;
-
-    const subTotal = parseFloat(document.getElementById("sub-total").innerText);
-const subtotalamount2 =  subTotal-totalAmount2 ;
-document.getElementById("sub-total").innerText=subtotalamount2;
-
-document.getElementById("total").innerText=subtotalamount2;
-
+// Removing items
+const minusBtn2 = document.getElementById('minusBtn2');
+minusBtn2.addEventListener('click',function(){
+    removeItems('input-number2','default-amount2',59)
 })
